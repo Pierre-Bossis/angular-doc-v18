@@ -1,0 +1,17 @@
+<div class="container mt-5">
+    <h2>Demo 04 - Attribute Binding</h2>
+
+    <p>Permet de lier un attribut avec le JavaScript</p>
+    <p>Tout les attributs html sont touchables</p>
+    
+    <input type="text" [(ngModel)]="maVariable">
+    
+    <p><input type="checkbox" [(ngModel)]="bool"> Activer le bouton</p>
+    <button (click)="changeValue()" [disabled]="!bool">Clique ici</button>
+    
+    <button (click)="changeValue()" [disabled]="maVariable > 5">Clique ici</button>
+    
+    <input type="range" [max]="max" [min]="min" [(ngModel)]="rangeValue"> [{{ min }} - {{ max }}] {{ rangeValue }}
+    
+    <p><a [href]="url" target="_blank">Vers Google</a></p>
+</div>

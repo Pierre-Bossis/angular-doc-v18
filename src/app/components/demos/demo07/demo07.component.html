@@ -1,0 +1,29 @@
+<div class="container mt-5">
+    <h2>Demo 7 - Les Custom Pipes</h2>
+
+    <p>
+        Les custom pipes (ou filtres personnalisés) sont des pipes créés par les développeurs pour répondre aux besoins
+        spécifiques de leur application. Les custom pipes sont créés en utilisant la classe PipeTransform fournie par
+        Angular, qui contient une méthode transform permettant de transformer les données en entrée.
+    </p>
+    
+    <p>
+        Commande pour créer un pipe : ng g pipe nom_du_pipe
+    </p>
+    
+    <h3>Transformation d'un nombre en jours heures minutes et secondes</h3>
+    
+    <input type="number" [(ngModel)]="nbSecondes">
+    <p>Nombre original : {{ nbSecondes }}</p>
+    <p>Nombre custom pipé en jours heures minutes et secondes : {{ nbSecondes | customPipe }}</p>
+    
+    <h3>Récupération d'un objet sur base de son id</h3>
+    
+    <p>Liste : {{ myArray | json }}</p>
+    <p>id 001 : {{ myArray | customPipe2 : '001' : 'nom' }}</p>
+    <p>id 002 : {{ myArray | customPipe2 : '002' : 'prenom' }}</p>
+    
+    <h3>Somme de valeurs</h3>
+    
+    <p>Somme : {{ 1 | customPipe3 : 1: 3: 6: 2 }}</p>
+</div>

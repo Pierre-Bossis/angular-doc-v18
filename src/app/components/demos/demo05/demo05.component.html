@@ -1,0 +1,54 @@
+<div class="container mt-5">
+    <h2>Demo 05 - La base du routing</h2>
+
+    <p>Utilisation de l'attribut routerLink plutôt que href pour éviter les rafraichissements de la page.</p>
+    <p>La balise &lt;router-outlet /&gt; rafraîchit dynamiquement le DOM virtuel en fonction de la route utilisée.</p>
+    
+    <p>Dans le fichier "app-routing.module.ts" se trouve l'objet Route qui ressource toutes les routes et composants liés.
+    </p>
+    
+    <h3>Propriétés d'une route :</h3>
+    
+    <h4>path:</h4>
+    <p>
+        Cette propriété définit le chemin ou l'URL de la route. Il peut s'agir d'une chaîne de caractères ou d'une
+        expression régulière.
+    </p>
+    
+    <h4>component :</h4>
+    <p>
+        Cette propriété définit le composant associé à la route. Il s'agit du composant qui sera chargé et
+        affiché lorsque la route sera activée.
+    </p>
+    
+    <h4>pathMatch :</h4>
+    <p>
+        Cette propriété définit comment la route doit être appariée. Elle peut prendre la valeur "full" ou "prefix". Si elle
+        est définie à "full", la route ne sera activée que si l'URL correspond exactement au chemin de la route. Si elle est
+        définie à "prefix", la route sera activée si l'URL commence par le chemin de la route.
+    </p>
+    
+    <h4>redirectTo :</h4>
+    <p>
+        Cette propriété permet de rediriger l'utilisateur vers une autre route lorsque la route courante
+        est activée. Elle peut prendre une valeur de type string ou de type UrlSegment[].
+    </p>
+    <h4>canActivate :</h4>
+    <p>
+        Cette propriété permet de spécifier un ou plusieurs gardes de route qui doivent être exécutés
+        avant
+        que la route ne soit activée. Les gardes de route sont des fonctions qui permettent de contrôler l'accès à une
+        route en fonction de certaines conditions.
+    </p>
+    <h4>data :</h4>
+    <p>
+        Cette propriété permet de stocker des données supplémentaires associées à la route. Ces données peuvent
+        être récupérées dans le composant associé à la route.
+    </p>
+    <h4>children :</h4>
+    <p>
+        Cette propriété permet de définir des routes enfants (ou sous-routes) qui sont associées à la route
+        courante. Les routes enfants sont utiles pour créer des vues hiérarchiques ou pour ajouter des fonctionnalités à
+        une vue existante.
+    </p>
+</div>
