@@ -1,0 +1,19 @@
+{
+    "products": [
+      {
+        "id": 1,
+        "name": "chaise",
+        "price": 49.99
+      },
+      {
+        "id": 2,
+        "name": "écran",
+        "price": 229.99
+      },
+      {
+        "name": "PC Gamer",
+        "price": "2500",
+        "id": 4
+      }
+    ]
+  }
