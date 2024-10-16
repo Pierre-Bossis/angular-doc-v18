@@ -1,0 +1,40 @@
+<div class="container mt-5">
+    <h2>Demo 03 - Event Binding</h2>
+
+    <p>Permet de lier un événement JavaScript à une méthode définie dans le TypeScript</p>
+
+    <h3>Click Event (cliquez sur les boutons)</h3>
+    <p>La valeur du nombre est : {{ nombre1 }}</p>
+    <button (click)="increase1()">+</button>
+    <button (click)="decrease1()">-</button>
+    <button (click)="reset1()">Reset</button>
+
+    <h3>Mouse Event (survollez les boutons)</h3>
+    <p>La valeur du nombre est : {{ nombre2 }}</p>
+    <button (mouseenter)="increase2()">+</button>
+    <button (mouseenter)="decrease2()">-</button>
+    <button (mouseenter)="reset2()">Reset</button>
+
+    <h3>Liste des events binding</h3>
+    <ul>
+        <li>click = au clic de la souris</li>
+        <li>dblclick = au double clic de la souris</li>
+        <li>submit = à l'envoi du formulaire</li>
+        <li>blur = perte du focus de l'élément (form)</li>
+        <li>focus = au focus de l'élément</li>
+        <li>scroll = lors du scroll de l'élément</li>
+        <li>cut = lors du CTRL + X</li>
+        <li>copy = lors du CTRL + C</li>
+        <li>paste = lors du CTRL + V</li>
+        <li>keyup = lors du relâchement de la touche du clavier</li>
+        <li>keypress = lors de l'appui (maintenue) de la touche du clavier</li>
+        <li>keydown = lors de l'appui de la touche du clavier</li>
+        <li>mouseup = lors du relâchement du bouton de la souris (sur l'élément)</li>
+        <li>mousedown = lors de l'appui du bouton de la souris (sur l'élément)</li>
+        <li>mouseenter = lors de l'entrée de la souris dans l'élément</li>
+        <li>mouseleave = lors de la sortie de la souris dans l'élément</li>
+        <li>drag = lors de la sélection de l'élément pour le déplacer</li>
+        <li>drop = lors du relâchement de l'élément</li>
+        <li>dragover = lors du déplacement de cet élément (toutes les 100ms)</li>
+    </ul>
+</div>
