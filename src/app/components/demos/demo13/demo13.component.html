@@ -1,0 +1,69 @@
+<div class="container mt-5">
+    <h2>Demo 13 - Cycle de vie des composants</h2>
+
+    <p>
+        Les hooks sont des méthodes d'un composant qui sont appelées automatiquement par le framework à des moments
+        spécifiques de son cycle de vie.
+    </p>
+    <p>
+        Les hooks sont des méthodes qui portent un nom spécifique, préfixé par le mot-clé "ng", suivi d'un nom qui
+        indique
+        l'étape du cycle de vie correspondante.
+    </p>
+
+    <h3>ngOnChanges :</h3>
+    <p>
+        Cette méthode est appelée lorsqu'une valeur d'une propriété liée change. Elle reçoit un objet contenant les
+        propriétés qui ont changé.
+    </p>
+
+    <h3>ngOnInit :</h3>
+    <p>
+        Cette méthode est appelée une fois, après que le composant ait été initialisé. C'est le moment où le composant
+        peut
+        initialiser ses propriétés et effectuer des tâches d'initialisation.
+    </p>
+
+    <h3>ngDoCheck :</h3>
+    <p>
+        Cette méthode est appelée à chaque cycle de détection des changements. Elle permet de détecter les changements
+        qui
+        n'ont pas été détectés par Angular.
+    </p>
+
+    <h3>ngAfterContentInit :</h3>
+    <p>
+        Cette méthode est appelée après que le contenu projeté a été initialisé. C'est le moment où le composant peut
+        interagir avec le contenu projeté.
+    </p>
+
+    <h3>ngAfterContentChecked :</h3>
+    <p>
+        Cette méthode est appelée à chaque cycle de détection des changements après que le contenu projeté a été
+        vérifié.
+        C'est le moment où le composant peut effectuer des tâches de vérification supplémentaires.
+    </p>
+
+    <h3>ngAfterViewInit :</h3>
+    <p>
+        Cette méthode est appelée après que la vue du composant et ses enfants ont été initialisés. C'est le moment où
+        le
+        composant peut interagir avec la vue.
+    </p>
+
+    <h3>ngAfterViewChecked :</h3>
+    <p>
+        Cette méthode est appelée à chaque cycle de détection des changements après que la vue du composant et ses
+        enfants
+        ont été vérifiés. C'est le moment où le composant peut effectuer des tâches de vérification supplémentaires.
+    </p>
+
+    <h3>ngOnDestroy :</h3>
+    <p>
+        Cette méthode est appelée juste avant que le composant soit détruit. C'est le moment où le composant peut
+        effectuer
+        des tâches de nettoyage.
+    </p>
+
+    <app-child [maVariable]="messageFromParent" />
+</div>

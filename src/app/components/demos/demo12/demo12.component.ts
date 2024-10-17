@@ -9,7 +9,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './demo12.component.html',
   styleUrl: './demo12.component.css'
 })
-export class Demo12Component implements OnInit{
+export class Demo12Component{
   isConnected: boolean = false;
 
   username: string = '';
