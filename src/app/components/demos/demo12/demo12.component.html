@@ -1,0 +1,41 @@
+<div class="container mt-5">
+    <h2>Demo 12 - Services et Injection de dépendances</h2>
+
+    <p>
+        L'injection de dépendance est un design pattern couramment utilisé en développement de logiciels. Il est utilisé
+        pour rendre le code plus modulaire, réutilisable et facilement testable.
+    </p>
+
+    <p>
+        En Angular, l'injection de dépendance est un concept clé. Elle consiste à injecter des instances de classes dans
+        une
+        autre classe qui en a besoin. Par exemple, si vous avez une classe "ServiceA" qui doit utiliser les
+        fonctionnalités
+        d'une autre classe "ServiceB", vous pouvez injecter une instance de "ServiceB" dans "ServiceA" plutôt que de
+        créer
+        une nouvelle instance de "ServiceB" à chaque fois que vous avez besoin de ses fonctionnalités.
+    </p>
+
+
+    <p>État de connexion : {{ isConnected ? 'Connecté' : 'Déconnecté' }}</p>
+
+    @if (!isConnected) {
+        <div class="dblock">
+            @if (message) {
+            <p>{{ message }}</p>
+            }
+
+            <label>Identifiant :</label>
+            <input type="text" [(ngModel)]="username">
+
+            <label>Mot de passe :</label>
+            <input type="password" [(ngModel)]="password">
+
+            <button (click)="logIn()">Connexion</button>
+        </div>
+    }
+
+    @if (isConnected) {
+        <button (click)="logOut()">Déconnexion</button>
+    }
+</div>
