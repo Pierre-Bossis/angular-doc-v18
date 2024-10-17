@@ -1,1 +1,44 @@
-<p>demo10 works!</p>
+<div class="container mt-5">
+    <h2>Demo 10 - Les Custom Directives</h2>
+
+    <p>
+        Les Custom Directives en Angular sont des fonctionnalités puissantes qui permettent de créer des comportements
+        réutilisables et personnalisés pour les éléments DOM dans une application Angular. Elles sont utilisées pour
+        étendre
+        les fonctionnalités des éléments existants ou pour créer de nouveaux éléments avec des comportements
+        spécifiques.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis commodi, fugit, reprehenderit temporibus
+        nostrum
+        doloribus iste minus incidunt quidem, consequatur impedit beatae voluptatibus officia quia cumque quas. Minima,
+        fugiat a.
+    </p>
+
+    <p appPrepareRender>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae corrupti maiores voluptates, delectus est, ab
+        repellat autem accusantium cupiditate nostrum natus consequuntur optio ipsam earum consequatur. Et dignissimos
+        alias
+        eum.
+    </p>
+
+    <p appPrepareRender>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Assumenda, cum maxime quos, eligendi blanditiis
+        laudantium
+        omnis veritatis optio placeat molestiae asperiores, labore similique ducimus deserunt quasi. Officia cumque amet
+        libero.
+    </p>
+
+    <h3>Directive d'attributs customs sur event</h3>
+    <p [appHighlight]="color" defaultColor="yellow">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+        mauris
+        eros, rutrum vitae ante sed, accumsan dignissim eu risus.</p>
+    <p appHighlight>Duis ac viverra nulla. Proin eleifend odio sed bibendum consequat. Vestibulum ultrices facilisis
+        aliquam.</p>
+    <p appHighlight>Maecenas vitae consequat tortor. Phasellus ultrices semper metus lacinia dapibus.</p>
+    <p appHighlight>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris eros, rutrum vitae ante sed,
+        accumsan dignissim nisi. </p>
+    <p appHighlight>Praesent eu ante justo. Sed ullamcorper diam sed purus dapibus, et convallis neque vestibulum. Fusce
+        lobortis id sapien in ultricies.</p>
+</div>

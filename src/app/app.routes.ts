@@ -10,6 +10,7 @@ import { Demo07Component } from './components/demos/demo07/demo07.component';
 import { Demo08Component } from './components/demos/demo08/demo08.component';
 import { Demo09Component } from './components/demos/demo09/demo09.component';
 import { Demo10Component } from './components/demos/demo10/demo10.component';
+import { Demo11Component } from './components/demos/demo11/demo11.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -23,5 +24,6 @@ export const routes: Routes = [
     {path: 'demo07', component: Demo07Component},
     {path: 'demo08', component: Demo08Component},
     {path: 'demo09', component: Demo09Component},
-    {path: 'demo10', component: Demo10Component}
+    {path: 'demo10', component: Demo10Component},
+    {path: 'demo11', component: Demo11Component}
 ];

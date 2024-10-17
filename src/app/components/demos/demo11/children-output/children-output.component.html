@@ -1,0 +1,10 @@
+<h3>Composant enfant output</h3>
+
+<p>
+    Pour définir un output dans un composant enfant, on utilise le décorateur &#64;Output() suivi du nom de la propriété et
+    on crée une instance de la classe EventEmitter pour émettre les événements. Le composant parent peut alors écouter
+    cet événement en utilisant la syntaxe (nomDeLoutput)="maFonction()" dans le template où il utilise le composant
+    enfant.
+</p>
+
+<button (click)="onEmit()">Clique sur moi pour émettre au parent</button>

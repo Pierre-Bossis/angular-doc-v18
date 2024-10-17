@@ -1,0 +1,21 @@
+<div class="container mt-5">
+    <h2>Demo 11 - Les Input & Output</h2>
+
+    <p>
+        Les inputs et les outputs sont des mécanismes de communication entre les composants. Les inputs permettent à un
+        composant parent de fournir des données à un composant enfant, tandis que les outputs permettent à un composant
+        enfant d'émettre des événements vers son composant parent.
+    </p>
+
+    <!-- Input -->
+    <div class="block">
+        <app-children-input [messageFromParent]="messageToChild" [colorChild]="colorToChild" />
+        <button (click)="changeColor()">Changer la couleur de l'enfant</button>
+    </div>
+
+    <!-- Output -->
+    <div class="block">
+        <app-children-output (emitToParent)="receiveEmit($event)" />
+        <p>Message venant de l'enfant vers parent : {{ messageFromChild }}</p>
+    </div>
+</div>
