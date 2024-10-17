@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "server:mock": "npx json-server --watch mocks/data.json"
   },
   "private": true,
   "dependencies": {
