@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h2>Demo 08 - Les directives de composants (ngStyle, ngClass)</h2>
+
+    <h4>NgStyle</h4>
+    <p [ngStyle]="currentStyle">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident, quas distinctio fugiat ipsam
+        voluptatem assumenda autem iste! Unde magni error accusamus repellat voluptatibus beatae recusandae repudiandae
+        sunt
+        autem fuga.
+    </p>
+
+    <button (click)="switchItalic()">Italic</button> &nbsp;
+    <button (click)="switchBold()">Bold</button> &nbsp;
+    <button (click)="switchSize()">Size</button>
+
+    <hr>
+
+    <h4>ngClass</h4>
+    <p [ngClass]="{ maClasse: isActive }">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nesciunt, eius dolore dicta quis voluptatem
+        sed
+        eos voluptas laborum consequuntur, quod provident. A porro deserunt deleniti quo optio natus qui!
+    </p>
+
+    <button (click)="switchClass()">Appliquer la classe</button>
+</div>

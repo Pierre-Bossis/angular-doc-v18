@@ -1,0 +1,62 @@
+<div class="container mt-5">
+    <h2>Demo 08 - Les directives structurelles</h2>
+
+    <p>Les directives structurelles sont utilisées pour manipuler la structure du DOM en fonction des données du
+        composant
+    </p>
+    <p>Elles sont généralement préfixées par le caractère * et permettent de créer des éléments conditionnels ou
+        répétitifs
+        dans le template.</p>
+
+    <p>Il existe plusieurs directives structurelles :</p>
+    <ul>
+        <li>&#64;if : affiche un élément HTML conditionnellement en fonction d'une expression booléenne.</li>
+        <li>&#64;for : permet de répéter un élément HTML pour chaque élément d'un tableau.</li>
+        <li>&#64;switch : permet d'afficher différents éléments HTML en fonction de la valeur d'une variable.</li>
+    </ul>
+
+    <h3>&#64;if</h3>
+
+    <button (click)="toggle()">Clique sur moi</button>
+
+    @if(isToggled) {
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatem cum eos inventore odio. Eaque soluta omnis
+        velit odit, quos id cumque cupiditate quod enim laborum fuga laudantium delectus blanditiis qui.</p>
+    }
+
+    @else {
+    <div>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, eligendi.
+    </div>
+    }
+
+    <h3>&#64;for</h3>
+    <ul>
+        @for(fruit of liste; track fruit; let id = $index, pair = $even) {
+        <!-- avec condition, applique la classe "classe" si pair = true -->
+        <p [ngClass]="{classe: pair}">{{ id }} - {{ fruit }} - {{ pair }}</p>
+
+        <!-- sans conditions -->
+        <!-- <p [ngClass]="'classe'">{{ id }} - {{ fruit }} - {{ pair }}</p> -->
+        }
+    </ul>
+
+    <h4>&#64;Switch</h4>
+
+    <input type="text" [(ngModel)]="inputValue">
+
+    @switch (inputValue) {
+        @case ("1") {
+            <p>Pomme</p>
+        }
+        @case ("2") {
+            <p>Poire</p>
+        }
+        @case ("3") {
+            <p>Pêche</p>
+        }
+        @default {
+           <p>Entrez 1, 2 ou 3</p> 
+        }
+    }
+</div>

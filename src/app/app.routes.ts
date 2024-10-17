@@ -7,6 +7,9 @@ import { Demo04Component } from './components/demos/demo04/demo04.component';
 import { Demo05Component } from './components/demos/demo05/demo05.component';
 import { Demo06Component } from './components/demos/demo06/demo06.component';
 import { Demo07Component } from './components/demos/demo07/demo07.component';
+import { Demo08Component } from './components/demos/demo08/demo08.component';
+import { Demo09Component } from './components/demos/demo09/demo09.component';
+import { Demo10Component } from './components/demos/demo10/demo10.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -17,5 +20,8 @@ export const routes: Routes = [
     {path: 'demo04', component: Demo04Component},
     {path: 'demo05', component: Demo05Component},
     {path: 'demo06', component: Demo06Component},
-    {path: 'demo07', component: Demo07Component}
+    {path: 'demo07', component: Demo07Component},
+    {path: 'demo08', component: Demo08Component},
+    {path: 'demo09', component: Demo09Component},
+    {path: 'demo10', component: Demo10Component}
 ];
