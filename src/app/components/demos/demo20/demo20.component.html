@@ -1,0 +1,20 @@
+<div class="container mt-5">
+  <h2>Demo 20 - Les Observables</h2>
+
+  <p>
+    Les observables sont des objets qui représentent une séquence de valeurs qui
+    peuvent être émises au fil du temps. Les observables sont utilisés pour la
+    gestion des événements et des données asynchrones dans les applications.
+  </p>
+
+  <p>Statut de connexion : {{ isConnected }}</p>
+  @if (!isConnected) {
+      <button (click)="login()">Se connecter</button>
+  }
+  @if (isConnected) {
+      <button (click)="logout()">Se déconnecter</button>
+  }
+
+  <p>Modification de la barre de navigation pour ajouter le "Connecté" /
+    "Déconnecté"</p>
+</div>

@@ -23,6 +23,11 @@ import { Demo17guardedComponent } from './components/demos/demo17/demo17guarded/
 import { isauthGuard } from './components/demos/demo17/guards/isauth.guard';
 import { Demo18Component } from './components/demos/demo18/demo18.component';
 import { UserResolver } from './components/demos/demo18/user.resolver';
+import { Demo19Component } from './components/demos/demo19/demo19.component';
+import { Demo20Component } from './components/demos/demo20/demo20.component';
+import { Demo21Component } from './components/demos/demo21/demo21.component';
+import { AddComponent } from './components/demos/demo21/add/add.component';
+import { EditComponent } from './components/demos/demo21/edit/edit.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -56,4 +61,15 @@ export const routes: Routes = [
 
     { path: 'demo18', component: Demo18Component },
     { path: 'demo18/:id', component: Demo18Component, resolve: { user: UserResolver } },
+
+    {path: 'demo19', component: Demo19Component},
+    {path: 'demo20', component: Demo20Component},
+
+    {
+        path: 'demo21', children: [
+          { path: '', component: Demo21Component },
+          { path: 'add', component: AddComponent },
+          { path: 'update/:id', component: EditComponent },
+        ]
+      },
 ];

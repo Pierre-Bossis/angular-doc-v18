@@ -1,0 +1,33 @@
+<div class="container mt-5">
+    <h2>Demo 19 - Les Storages</h2>
+
+<h3>LocalStorage :</h3>
+<p>
+    Il s'agit d'un mécanisme de stockage de données côté client, qui permet de stocker des données sous
+    forme de clé/valeur dans le navigateur web. Les données stockées restent disponibles même après la fermeture du
+    navigateur et peuvent être utilisées pour stocker des informations telles que les préférences utilisateur ou des
+    données de configuration.
+</p>
+
+<input [(ngModel)]="usernameLocal" placeholder="Enter your username">
+<button (click)="saveLocal()">Save</button>
+<button (click)="loadLocal()">Load</button>
+<button (click)="removeLocal()">Remove a key</button>
+<button (click)="clearLocal()">Clear</button>
+<p>Username: {{ savedUsernameLocal }}</p>
+
+
+<h3>SessionStorage :</h3>
+<p>
+    Similaire à LocalStorage, SessionStorage permet de stocker des données sous forme de clé/valeur côté client.
+    Cependant, les données stockées ne sont disponibles que pour la durée de la session en cours (c'est-à-dire jusqu'à
+    la fermeture du navigateur).
+</p>
+
+<input [(ngModel)]="usernameSession" placeholder="Enter your username">
+<button (click)="saveSession()">Save</button>
+<button (click)="loadSession()">Load</button>
+<button (click)="removeSession()">Remove a key</button>
+<button (click)="clearSession()">Clear</button>
+<p>Username: {{ savedUsernameSession }}</p>
+</div>

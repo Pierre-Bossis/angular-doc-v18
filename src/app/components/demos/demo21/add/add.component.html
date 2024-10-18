@@ -1,0 +1,13 @@
+<h3>Ajouter un produit</h3>
+
+<p><a routerLink="/demos/demo21">Retour à la démonstration 21</a></p>
+
+<form class="dblock" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <label>Nom :</label>
+    <input type="text" formControlName="name">
+
+    <label>Prix :</label>
+    <input type="text" formControlName="price">
+
+    <button>Ajouter</button>
+</form>

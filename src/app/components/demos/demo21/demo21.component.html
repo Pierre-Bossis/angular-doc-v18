@@ -1,0 +1,38 @@
+<div class="container mt-5">
+  <h2>Demo 21 - Le HttpClient</h2>
+
+  <p>
+    HttpClient est un module dans Angular qui facilite les appels HTTP vers des
+    services externes. Il fournit des méthodes pour effectuer des requêtes GET,
+    POST, PUT, DELETE, etc. vers un serveur distant et récupérer les réponses.
+  </p>
+
+  <h3>Récupération</h3>
+
+  <button routerLink="/demo21/add" class="my-20">
+    Ajouter un nouveau produit
+  </button>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Nom</th>
+      <th>Prix</th>
+      <th>Option</th>
+    </tr>
+
+    @for (product of products; track $index) {
+    <tr>
+      <td>{{ product.id }}</td>
+      <td>{{ product.name }}</td>
+      <td>
+        {{ product.price | currency : "EUR" : "symbol" : "1.2-2" : "fr-FR" }}
+      </td>
+      <td>
+        <button [routerLink]="['/demo21/update', product.id]">Éditer</button>
+        <button (click)="delete(product.id)">Supprimer</button>
+      </td>
+    </tr>
+    }
+  </table>
+</div>
