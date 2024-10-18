@@ -13,6 +13,9 @@ import { Demo10Component } from './components/demos/demo10/demo10.component';
 import { Demo11Component } from './components/demos/demo11/demo11.component';
 import { Demo12Component } from './components/demos/demo12/demo12.component';
 import { Demo13Component } from './components/demos/demo13/demo13.component';
+import { Demo14Component } from './components/demos/demo14/demo14.component';
+import { Demo15Component } from './components/demos/demo15/demo15.component';
+import { Demo16Component } from './components/demos/demo16/demo16.component';
 
 export const routes: Routes = [
     {path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -29,5 +32,10 @@ export const routes: Routes = [
     {path: 'demo10', component: Demo10Component},
     {path: 'demo11', component: Demo11Component},
     {path: 'demo12', component: Demo12Component},
-    {path: 'demo13', component: Demo13Component}
+    {path: 'demo13', component: Demo13Component},
+    {path: 'demo14', component: Demo14Component},
+    {path: 'demo15', component: Demo15Component},
+    {path: 'demo16', component: Demo16Component},
+    {path: 'routage', component: Demo16Component},
+    {path: 'routage/:id', component: Demo16Component}
 ];

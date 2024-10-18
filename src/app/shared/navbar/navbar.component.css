@@ -1,6 +1,6 @@
 nav {
     background: var(--primary);
-    color: white;
+    color: red;
 
     .logo {
         font-size: 18px;

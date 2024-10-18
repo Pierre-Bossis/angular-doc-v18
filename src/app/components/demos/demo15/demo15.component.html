@@ -1,0 +1,42 @@
+<div class="container mt-5">
+    <h2>Demo 15 - Les Custom Validators</h2>
+
+<div class="container">
+    <form [formGroup]="myForm">
+        <div class="dblock">
+            <label>Name :</label>
+            <input type="text" formControlName="name">
+
+            @if (myForm.controls['name'].touched && myForm.controls['name'].errors) {
+                    <p>{{ myForm.controls['name'].errors['name'] }}</p>
+            }
+        </div>
+
+        <div class="dblock">
+            <label>Email :</label>
+            <input type="email" formControlName="email">
+
+            @if (myForm.controls['email'].touched && myForm.controls['email'].errors) {
+                <p>{{ myForm.controls['email'].errors['name'] }}</p>
+            }
+
+        </div>
+
+        <div class="dblock">
+            <label>Password :</label>
+            <input type="password" formControlName="password">
+
+            <label>Verify Password :</label>
+            <input type="password" formControlName="passwordVerify">
+
+            @if (myForm.controls['passwordVerify'].touched && myForm.errors) {
+                <p>{{ myForm.errors['twoPasswordCheck'] }}</p>
+            }
+        </div>
+
+        @if (myForm.valid) {
+            <button class="dblock">Envoyer</button>
+        }
+    </form>
+</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container mt-5">
+  <h2>Demo 16 - Le routing</h2>
+
+  <p>La classe Router permet de gérer les routes au sein du composant</p>
+
+  <h3>Redirection vers ce composant</h3>
+
+  <button (click)="navigate()">/routage</button>
+
+  <h3>Redirection vers ce composant avec paramètre</h3>
+  <button (click)="navigateWithParam()">/routage/42</button>
+
+  @if (id) {
+      <p>L'id transmit par l'url vaut {{ id }}</p>
+  }
+
+  <h3>Redirection vers ce composant avec un queryParam</h3>
+  <button (click)="navigateWithQuery()">/routage</button>
+
+  @if (name) {
+      <p>queryParam transmis : {{ name }}</p>
+  }
+</div>

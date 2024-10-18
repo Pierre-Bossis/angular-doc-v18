@@ -1,1 +1,162 @@
 /* You can add global styles to this file, and also import other style files */
+ /* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+p {
+  padding: 5px 0;
+  word-spacing: 1px;
+  text-align: justify;
+}
+
+ul {
+  list-style: disc;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ /* Variables */
+:root {
+  --font-family: "Roboto", sans-serif;
+  --primary: #3579b8;
+  --secondary: #77acd4;
+  --accent: #e5546d;
+  --lightgray: #ddd;
+  --text-regular: #444;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--text-regular);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 20px auto;
+}
+
+p {
+  margin: 5px 0;
+}
+
+button {
+  padding: 2px 10px;
+}
+
+hr {
+  margin: 20px 0;
+  border-top: 1px solid var(--text-regular);
+}
+
+input,
+select,
+button {
+  padding: 5px;
+}
+
+ /* layout */
+
+.content {
+  padding: 10px auto;
+  border: var(--text);
+}
+
+.container {
+  max-width: 1200px;
+  display: block;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.flex-justify-content-center {
+  justify-content: center;
+}
+
+.flex-justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-align-items-center {
+  align-items: center;
+}
+
+.flex-align-items-between {
+  align-items: space-between;
+}
+
+.flex-fill {
+  flex: 1 1 auto;
+}
+
+ /* utils */
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-20 {
+  padding: 20px;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-20 {
+  margin: 20px;
+}
+
+.mx-20 {
+  margin: 0 20px;
+}
+
+.my-20 {
+  margin: 20px 0;
+}
+
+.dblock > * {
+  display: block;
+  margin: 10px 0;
+}
+
+.error {
+  color: red;
+}
+
+.border {
+  border: 1px solid var(--primary);
+}
+
+/* debug */
+
+.d1 {
+  border: 1px solid red;
+}
+
+.d2 {
+  border: 1px solid green;
+}

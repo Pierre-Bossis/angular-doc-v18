@@ -1,0 +1,119 @@
+<div class="container mt-5">
+  <h2>Demo 14 - Les formulaires (Validators)</h2>
+
+  <h3>Avec Two Way Bindings</h3>
+
+  <div class="content">
+    <div class="dblock">
+      <label for="name">Name : {{ name }}</label>
+      <input type="text" id="name" [(ngModel)]="name" />
+    </div>
+
+    <div class="dblock">
+      <label for="email">Email : {{ email }}</label>
+      <input type="text" id="email" [(ngModel)]="email" />
+    </div>
+
+    <div class="dblock">
+      <label for="password">Password : {{ password }}</label>
+      <input type="password" id="password" [(ngModel)]="password" />
+    </div>
+
+    <div class="dblock">
+      <label for="gender">Gender : {{ gender }}</label>
+      <select id="gender" [(ngModel)]="gender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+    </div>
+
+    @if (name && email && password && gender) {
+    <button (click)="send()">Envoyer</button>
+    }
+  </div>
+
+  <h3>Avec Validators</h3>
+
+  <div class="content">
+    <form [formGroup]="myForm">
+      <div class="dblock">
+        <label for="name">Name :</label>
+        <input
+          type="text"
+          id="name"
+          formControlName="name"
+          [ngClass]="{
+            error:
+              myForm.controls['name'].touched && !myForm.controls['name'].valid
+          }"
+        />
+
+        @if (myForm.controls['name'].touched && !myForm.controls['name'].valid)
+        {
+        <span class="error">Requis + caractères entre 3 et 20</span>
+        }
+      </div>
+
+      <div class="dblock">
+        <label for="email">Email :</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          formControlName="email"
+          [ngClass]="{ error: !myForm.controls['email'].valid }"
+        />
+        @if (myForm.controls['email'].touched && !myForm.controls['email'].valid) {
+        <span class="error">Requis + email format</span>
+        }
+      </div>
+
+      <div class="dblock">
+        <label for="password">Password :</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          formControlName="password"
+          [ngClass]="{ error: !myForm.controls['password'].valid }"
+        />
+        @if (myForm.controls['password'].touched && !myForm.controls['password'].valid) {
+        <span class="error">Requis + caractères entre 6 et 15</span>
+        }
+      </div>
+
+      <div class="dblock">
+        <label for="gender">Gender :</label>
+        <select formControlName="gender" id="gender">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Other">Other</option>
+        </select>
+        @if (myForm.controls['gender'].touched && !myForm.controls['gender'].valid) {
+        <span class="error">Requis</span>
+        }
+      </div>
+
+      <button (click)="sendFG()" [disabled]="!myForm.valid">Envoyer</button>
+
+      <h3>Form Control (abtractControl) :</h3>
+      <span *ngIf="myForm.pristine">(pristine)</span>&nbsp;
+      <span *ngIf="myForm.touched">(touched)</span>&nbsp;
+      <span *ngIf="myForm.invalid">(invalid)</span>&nbsp;
+      <span *ngIf="myForm.valid">(valid)</span>&nbsp;
+
+      <h3>Form Control Individual (control) :</h3>
+
+      @if (myForm.controls['name'].valid) {
+      <p>Name: (valid)</p>
+      } @if (myForm.controls['email'].valid) {
+      <p>Email: (valid)</p>
+      } @if (myForm.controls['password'].valid) {
+      <p>Password: (valid)</p>
+      } @if (myForm.controls['gender'].valid) {
+      <p>Gender: (valid)</p>
+      }
+    </form>
+  </div>
+</div>
