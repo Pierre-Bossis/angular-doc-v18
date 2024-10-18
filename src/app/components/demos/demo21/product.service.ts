@@ -10,6 +10,8 @@ export class ProductService {
   private readonly _productEndPoint: string = 'http://localhost:3000/products';
 
   //rajouter : provideHttpClient() dans les providers du app.config.ts
+  //ajouter dans package.json -> scripts la ligne: "server:mock": "npx json-server --watch mocks/data.json" 
+  //lancer le serveur : npm run server:mock
   constructor (private _httpClient: HttpClient) { }
 
   // CRUD

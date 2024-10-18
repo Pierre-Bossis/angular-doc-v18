@@ -28,48 +28,51 @@ import { Demo20Component } from './components/demos/demo20/demo20.component';
 import { Demo21Component } from './components/demos/demo21/demo21.component';
 import { AddComponent } from './components/demos/demo21/add/add.component';
 import { EditComponent } from './components/demos/demo21/edit/edit.component';
+import { Demo22Component } from './components/demos/demo22/demo22.component';
 
 export const routes: Routes = [
-    { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
-    { path: 'demo01', component: Demo01Component },
-    { path: 'demo02', component: Demo02Component },
-    { path: 'demo03', component: Demo03Component },
-    { path: 'demo04', component: Demo04Component },
-    { path: 'demo05', component: Demo05Component },
-    { path: 'demo06', component: Demo06Component },
-    { path: 'demo07', component: Demo07Component },
-    { path: 'demo08', component: Demo08Component },
-    { path: 'demo09', component: Demo09Component },
-    { path: 'demo10', component: Demo10Component },
-    { path: 'demo11', component: Demo11Component },
-    { path: 'demo12', component: Demo12Component },
-    { path: 'demo13', component: Demo13Component },
-    { path: 'demo14', component: Demo14Component },
-    { path: 'demo15', component: Demo15Component },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'demo01', component: Demo01Component },
+  { path: 'demo02', component: Demo02Component },
+  { path: 'demo03', component: Demo03Component },
+  { path: 'demo04', component: Demo04Component },
+  { path: 'demo05', component: Demo05Component },
+  { path: 'demo06', component: Demo06Component },
+  { path: 'demo07', component: Demo07Component },
+  { path: 'demo08', component: Demo08Component },
+  { path: 'demo09', component: Demo09Component },
+  { path: 'demo10', component: Demo10Component },
+  { path: 'demo11', component: Demo11Component },
+  { path: 'demo12', component: Demo12Component },
+  { path: 'demo13', component: Demo13Component },
+  { path: 'demo14', component: Demo14Component },
+  { path: 'demo15', component: Demo15Component },
 
-    { path: 'demo16', component: Demo16Component },
-    { path: 'routage', component: Demo16Component },
-    { path: 'routage/:id', component: Demo16Component },
+  { path: 'demo16', component: Demo16Component },
+  { path: 'routage', component: Demo16Component },
+  { path: 'routage/:id', component: Demo16Component },
 
-    {
-        path: 'demo17', canActivateChild: [canActivateChildGuard], children: [
-            { path: '', component: Demo17Component, canDeactivate: [canDeactivateGuard] },
-            { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [isauthGuard] }
-        ]
-    },
+  {
+    path: 'demo17', canActivateChild: [canActivateChildGuard], children: [
+      { path: '', component: Demo17Component, canDeactivate: [canDeactivateGuard] },
+      { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [isauthGuard] }
+    ]
+  },
 
-    { path: 'demo18', component: Demo18Component },
-    { path: 'demo18/:id', component: Demo18Component, resolve: { user: UserResolver } },
+  { path: 'demo18', component: Demo18Component },
+  { path: 'demo18/:id', component: Demo18Component, resolve: { user: UserResolver } },
 
-    {path: 'demo19', component: Demo19Component},
-    {path: 'demo20', component: Demo20Component},
+  { path: 'demo19', component: Demo19Component },
+  { path: 'demo20', component: Demo20Component },
 
-    {
-        path: 'demo21', children: [
-          { path: '', component: Demo21Component },
-          { path: 'add', component: AddComponent },
-          { path: 'update/:id', component: EditComponent },
-        ]
-      },
+  {
+    path: 'demo21', children: [
+      { path: '', component: Demo21Component },
+      { path: 'add', component: AddComponent },
+      { path: 'update/:id', component: EditComponent },
+    ]
+  },
+
+  {path: 'demo22', component: Demo22Component}
 ];
