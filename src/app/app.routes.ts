@@ -29,6 +29,7 @@ import { Demo21Component } from './components/demos/demo21/demo21.component';
 import { AddComponent } from './components/demos/demo21/add/add.component';
 import { EditComponent } from './components/demos/demo21/edit/edit.component';
 import { Demo22Component } from './components/demos/demo22/demo22.component';
+import { ErrorComponent } from './shared/error/error.component';
 
 export const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -74,5 +75,6 @@ export const routes: Routes = [
     ]
   },
 
-  {path: 'demo22', component: Demo22Component}
+  {path: 'demo22', component: Demo22Component},
+  {path: '**', component: ErrorComponent}
 ];
