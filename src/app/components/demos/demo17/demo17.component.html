@@ -1,0 +1,64 @@
+<div class="container mt-5">
+    <h2>Demo 17 - Les Guards</h2>
+
+<p>
+    Les Guards sont des mécanismes qui permmettent de contrôler la navigation dans une application.
+    Les guards sont des classes qui implémentent l'interface 'CanActivate', 'CanActivateChild', 'CanLoad', ou
+    'CanDeactivate'.
+</p>
+
+<h3>CanActivate</h3>
+<p>
+    est utilisé pour déterminer si un utilisateur a le droit d'accéder à une page en vérifiant les permissions de
+    l'utilisateur ou en effectuant des opérations d'authentification.
+</p>
+
+
+<h3>CanActivateChild</h3>
+<p>
+    est similaire à CanActivate, mais est utilisé pour contrôler l'accès à une route enfant (un composant inclus dans un
+    autre composant).
+</p>
+
+
+<h3>CanLoad</h3>
+<p>
+    est utilisé pour empêcher le chargement d'un module à moins que certaines conditions soient remplies.
+</p>
+
+
+<h3>CanDeactivate</h3>
+<p>
+    est utilisé pour confirmer si un utilisateur peut quitter une page avant de la quitter réellement.
+</p>
+
+<p>
+    Les guards sont utilisés pour mettre en place des politiques de sécurité et de navigation cohérentes dans une
+    application. Les guards peuvent également être utilisés pour interrompre la navigation vers une page jusqu'à ce
+    qu'une certaine condition soit remplie, comme une opération de chargement de données.
+
+    Les guards peuvent être facilement intégrés à un système de routage Angular en les déclarant dans le tableau de
+    providers du NgModule qui contient la configuration des routes. Les guards peuvent être configurés pour une route
+    spécifique ou appliqués à toutes les routes de l'application.
+</p>
+<p>
+    Les guards sont utilisés pour mettre en place des politiques de sécurité et de navigation cohérentes dans une
+    application. Les guards peuvent également être utilisés pour interrompre la navigation vers une page jusqu'à ce
+    qu'une certaine condition soit remplie, comme une opération de chargement de données.
+
+    Les guards peuvent être facilement intégrés à un système de routage Angular en les déclarant dans le tableau de
+    providers du NgModule qui contient la configuration des routes. Les guards peuvent être configurés pour une route
+    spécifique ou appliqués à toutes les routes de l'application.
+</p>
+
+@if (!isConnected) {
+    <button (click)="login()">Login</button>
+}
+@if (isConnected) {
+    <button (click)="logout()">Logout</button>
+}
+
+<p>
+    <a routerLink="/demo17/demo17guarded">Se rendre sur la page Guard</a>
+</p>
+</div>

@@ -1,0 +1,50 @@
+<div class="container mt-5">
+  <h2>Demo 18 - Resolver</h2>
+
+  <p>
+    En Angular, les resolvers sont des fonctions qui permettent de pré-charger
+    des données avant que la vue associée soit rendue. Ils sont souvent utilisés
+    pour résoudre des données asynchrones telles que des données provenant d'une
+    API.
+  </p>
+
+  <p>
+    Le rôle principal des resolvers est de s'assurer que les données nécessaires
+    à la vue sont disponibles avant que celle-ci ne soit rendue. Cela permet
+    d'éviter des problèmes de rendu de la vue avec des données manquantes ou
+    incomplètes.
+  </p>
+
+  <p>
+    Si vous ajoutez un lien vers la même route dans votre composant HTML, cela
+    peut empêcher le Resolver de se déclencher. Cela est dû au fait que lorsque
+    vous cliquez sur le lien, Angular considère que vous naviguez à la même URL
+    et ne déclenche pas le Resolver car il suppose que les données ont déjà été
+    récupérées.
+  </p>
+
+  <p>
+    Pour résoudre ce problème, vous pouvez utiliser la directive "routerLink"
+    d'Angular pour créer des liens vers d'autres routes de manière sécurisée et
+    en même temps permettre au Resolver de se déclencher correctement. En
+    utilisant cette directive, Angular va déclencher une nouvelle navigation et
+    donc permettre au Resolver de s'exécuter à nouveau si nécessaire.
+  </p>
+
+  <a routerLink="/demo18"><button>Retour à la liste des utilisateurs</button></a>
+
+  <hr />
+
+  <a routerLink="/demo18/1"><button>Utilisateur id 1</button></a> <br />
+  <a routerLink="/demo18/2"><button>Utilisateur id 2</button></a> <br />
+  <a routerLink="/demo18/3"><button>Utilisateur id 3</button></a> <br />
+  <a routerLink="/demo18/4"><button>Utilisateur id 4</button></a> <br />
+
+  @if (user) {
+  <div>
+    <h2>Détails de l'utilisateur</h2>
+    <p>Nom: {{ user.nom }}</p>
+    <p>Prénom: {{ user.prenom }}</p>
+  </div>
+  }
+</div>

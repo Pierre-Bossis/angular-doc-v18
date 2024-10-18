@@ -16,26 +16,44 @@ import { Demo13Component } from './components/demos/demo13/demo13.component';
 import { Demo14Component } from './components/demos/demo14/demo14.component';
 import { Demo15Component } from './components/demos/demo15/demo15.component';
 import { Demo16Component } from './components/demos/demo16/demo16.component';
+import { Demo17Component } from './components/demos/demo17/demo17.component';
+import { canActivateChildGuard } from './components/demos/demo17/guards/can-activate-child.guard';
+import { canDeactivateGuard } from './components/demos/demo17/guards/can-deactivate.guard';
+import { Demo17guardedComponent } from './components/demos/demo17/demo17guarded/demo17guarded.component';
+import { isauthGuard } from './components/demos/demo17/guards/isauth.guard';
+import { Demo18Component } from './components/demos/demo18/demo18.component';
+import { UserResolver } from './components/demos/demo18/user.resolver';
 
 export const routes: Routes = [
-    {path: '', redirectTo: 'home', pathMatch: 'full'},
-    {path: 'home', component: HomeComponent},
-    {path: 'demo01', component: Demo01Component},
-    {path: 'demo02', component: Demo02Component},
-    {path: 'demo03', component: Demo03Component},
-    {path: 'demo04', component: Demo04Component},
-    {path: 'demo05', component: Demo05Component},
-    {path: 'demo06', component: Demo06Component},
-    {path: 'demo07', component: Demo07Component},
-    {path: 'demo08', component: Demo08Component},
-    {path: 'demo09', component: Demo09Component},
-    {path: 'demo10', component: Demo10Component},
-    {path: 'demo11', component: Demo11Component},
-    {path: 'demo12', component: Demo12Component},
-    {path: 'demo13', component: Demo13Component},
-    {path: 'demo14', component: Demo14Component},
-    {path: 'demo15', component: Demo15Component},
-    {path: 'demo16', component: Demo16Component},
-    {path: 'routage', component: Demo16Component},
-    {path: 'routage/:id', component: Demo16Component}
+    { path: '', redirectTo: 'home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'demo01', component: Demo01Component },
+    { path: 'demo02', component: Demo02Component },
+    { path: 'demo03', component: Demo03Component },
+    { path: 'demo04', component: Demo04Component },
+    { path: 'demo05', component: Demo05Component },
+    { path: 'demo06', component: Demo06Component },
+    { path: 'demo07', component: Demo07Component },
+    { path: 'demo08', component: Demo08Component },
+    { path: 'demo09', component: Demo09Component },
+    { path: 'demo10', component: Demo10Component },
+    { path: 'demo11', component: Demo11Component },
+    { path: 'demo12', component: Demo12Component },
+    { path: 'demo13', component: Demo13Component },
+    { path: 'demo14', component: Demo14Component },
+    { path: 'demo15', component: Demo15Component },
+
+    { path: 'demo16', component: Demo16Component },
+    { path: 'routage', component: Demo16Component },
+    { path: 'routage/:id', component: Demo16Component },
+
+    {
+        path: 'demo17', canActivateChild: [canActivateChildGuard], children: [
+            { path: '', component: Demo17Component, canDeactivate: [canDeactivateGuard] },
+            { path: 'demo17guarded', component: Demo17guardedComponent, canActivate: [isauthGuard] }
+        ]
+    },
+
+    { path: 'demo18', component: Demo18Component },
+    { path: 'demo18/:id', component: Demo18Component, resolve: { user: UserResolver } },
 ];
